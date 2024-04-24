@@ -1,0 +1,4 @@
+<?php 
+
+//DB işlemleri gerçekleşecek 
+    
