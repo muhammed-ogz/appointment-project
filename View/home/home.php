@@ -29,7 +29,7 @@
                          <span class="icon icon-bar"></span>
                          <span class="icon icon-bar"></span>
                     </button>
-                    <a href="index.html" class="navbar-brand"><i class="fa fa-stethoscope"></i> Randevu Web App |
+                    <a href="index.html" class="navbar-brand"> Randevu Web App |
                          Muhammed Oğuz</a>
                </div>
 
@@ -163,7 +163,8 @@
                               <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
                                    <h2>Randevu Alın</h2>
                               </div>
-
+                              <?php echo get_session('error') != false ? '<div class = "alert alert-' . $_SESSION['error'].['type']. '">' . $_SESSION['error'].['message']. '</div>' : null;
+                              ?>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <div class="col-md-6 col-sm-6">
                                         <label for="name">Adınız</label>
@@ -263,7 +264,6 @@
           </div>
      </footer>
 
-     <!-- SCRIPTS -->
      <script src="assets/js/jquery.js"></script>
      <script src="assets/js/bootstrap.min.js"></script>
      <script src="assets/js/jquery.sticky.js"></script>
