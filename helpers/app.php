@@ -64,7 +64,7 @@ function redirect($link){
 
 function url($url){
     global $config;
-    return URL . '/' . $url;
+    return URL . $url;
 }
 
 function _p($data){

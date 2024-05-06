@@ -158,7 +158,7 @@
                     </div>
 
                     <div class="col-md-6 col-sm-6">
-                         <form id="appointment-form" role="form" method="post" action="yonetim/randevukayit.php">
+                         <form id="appointment-form" role="form" method="post">
 
                               <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
                                    <h2>Randevu Alın</h2>
@@ -180,15 +180,16 @@
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="date">Tarih</label>
-                                        <input type="date" name="randevutarih" value="" class="form-control" required>
+                                        <input type="date" id="date" name="randevutarih" value="" class="form-control" required>
                                    </div>
 
                                    <div class="col-md-6 col-sm-6">
                                         <label for="select">Bölüm</label>
-                                        <select class="form-control" name="bolum">
-                                             <option>Epilasyon</option>
-                                             <option>Manikür-Pedikür</option>
-                                             <option>Saç Bakım</option>
+                                        <select class="form-control" id="select" name="bolum">
+                                             <option>Bölüm seçiniz</option>
+                                             <?php foreach($data as $bolumler): ?>
+                                                  <option value="<?= $bolumler['id'] ?>"><?= $bolumler['name'] ?></option>
+                                             <?php endforeach; ?>
                                         </select>
                                    </div>
 
@@ -199,8 +200,8 @@
                                         <label for="Message">Ek Mesajınız</label>
                                         <textarea class="form-control" rows="5" id="message" name="mesaj"
                                              placeholder="Mesaj"></textarea>
-                                        <button type="submit" class="form-control btn-blue" id="cf-submit"
-                                             name="submit">Randevu Al</button>
+                                        <button type="submit" name="submit" value="1" class="form-control btn-blue"> Randevu al
+                                        </button>
                                    </div>
                               </div>
                          </form>
@@ -273,6 +274,48 @@
      <script src="assets/js/owl.carousel.min.js"></script>
      <script src="assets/js/custom.js"></script>
      <script src="https://kit.fontawesome.com/8710cfdb2c.js" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script>
+
+
+          const basvuru = document.getElementById('appointment-form');
+
+          basvuru.addEventListener('submit', (e) =>{
+
+          let name = document.getElementById('name').value;
+          let email = document.getElementById('email').value;
+          let date = document.getElementById('date').value;
+          let select = document.getElementById('select').value;
+          let phone = document.getElementById('phone').value;
+          let message = document.getElementById('message').value;
+
+          let formData = new FormData();
+
+          formData.append('name',name);
+          formData.append('email',email);
+          formData.append('date',date);
+          formData.append('select',select);
+          formData.append('phone',phone);
+          formData.append('message',message);
+
+          axios.post('<?= url('api/randevuekle') ?>', formData).then(res => {
+               if(res.data.redirect) {
+                    window.location.href = res.data.redirect;
+               } else {
+                swal.fire(
+                    res.data.title,
+                    res.data.msg,
+                    res.data.status,
+                );
+            }
+               console.log(res)
+          }).catch(err => console.log(err))
+          e.preventDefault();
+     });
+          
+         
+     </script>
 
 </body>
 
