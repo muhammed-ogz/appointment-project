@@ -143,7 +143,7 @@
                                    </p>
                                    <div class="team-contact-info">
                                         <p><i class="fa fa-phone"></i> +90 551 551 51 51</p>
-                                        <p><i class="fa fa-envelope-o"></i> <a href="#">kuafor3@testmail.mail</a></p>
+                                        <p><i class="fa fa-envelope-o"></i> <a href="#">profdrlorem2@outlook.mail</a></p>
                                    </div>
                                    <br><br><br>
                               </div>
