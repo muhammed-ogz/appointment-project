@@ -283,43 +283,6 @@
      <script src="https://kit.fontawesome.com/8710cfdb2c.js" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-     <script>
-          const basvuru = document.getElementById('appointment-form');
-
-          basvuru.addEventListener('submit', (e) => {
-
-               let name = document.getElementById('name').value;
-               let email = document.getElementById('email').value;
-               let date = document.getElementById('date').value;
-               let select = document.getElementById('select').value;
-               let phone = document.getElementById('phone').value;
-               let message = document.getElementById('message').value;
-
-               let formData = new FormData();
-
-               formData.append('name', name);
-               formData.append('email', email);
-               formData.append('date', date);
-               formData.append('select', select);
-               formData.append('phone', phone);
-               formData.append('message', message);
-
-               axios.post('<?= url('api/randevuekle') ?>', formData).then(res => {
-                    if (res.data.redirect) {
-                         window.location.href = res.data.redirect;
-                    } else {
-                         swal.fire(
-                              res.data.title,
-                              res.data.msg,
-                              res.data.status,
-                         );
-                    }
-                    console.log(res)
-               }).catch(err => console.log(err))
-               e.preventDefault();
-          });
-     </script>
-
 </body>
 
 </html>
