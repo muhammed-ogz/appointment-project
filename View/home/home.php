@@ -14,13 +14,12 @@
                          <span class="phone-icon"><i class="fa fa-phone"></i>+90(500) 999 99 90</span>
                          <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> Pazartesi - Cuma günleri arası
                               08.00 - 18.00</span>
-                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a
-                                   href="mailto:muhammetnabioguz@gmail.com">muhammetnabioguz@gmail.com</a></span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="mailto:muhammetnabioguz@gmail.com">muhammetnabioguz@gmail.com</a></span>
                     </div>
                </div>
           </div>
      </header>
-     
+
      <section class="navbar navbar-default navbar-static-top" role="navigation">
           <div class="container">
                <div class="navbar-header">
@@ -55,13 +54,17 @@
                          <div class="about-info">
                               <h2 class="wow fadeInUp" data-wow-delay="0.6s"> Randevu Uygulamasına hoşgeldiniz</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In blanditiis odit neque
-                                        commodi quasi aliquid unde repellat ad quia adipisci!</p>
+                                   <p>Kendi alanlarında oldukça uzman doktorlarımız ile beraber güvenle tedavi olabilecek,
+                                        hiçbir sıkıntı yaşamadan acısız ve en kısa sürede tedavi olabilmeniz için çalışıyoruz.
+                                   </p>
                               </div>
                               <figure class="profile wow fadeInUp" data-wow-delay="1s">
                                    <figcaption>
-                                        <h3>Kuaför Lorem Ipsum</h3>
-                                        <p>Genel Müdür</p>
+                                        <h3>Lorem Ipsum Hastanesi</h3>
+                                        <p>
+                                             Lorem Ipsum hastanesi sizlerin sağlığınıza kısa sürede ulaşmanız için canla başla çalışmaya
+                                             kendini adamış çalışanlarımızla sizlere hizmet vermeye devam ediyor.
+                                        </p>
                                    </figcaption>
                               </figure>
                          </div>
@@ -92,18 +95,19 @@
                               <img src="images/team-image1.jpg" class="img-responsive" alt="">
 
                               <div class="team-info">
-                                   <h3>Kuaför 1</h3>
-                                   <p>Epilasyon Uzmanı</p>
+                                   <h3>Prof Dr. Lorem Ipsum</h3>
+                                   <p>
+                                        Kardiyoloji alanında uzman tecrübeye sahip Lorem bey kalp rahatsızlıklarınızı
+                                        en kısa sürede çözmek için çalışmakta.</p>
                                    <div class="team-contact-info">
                                         <p><i class="fa fa-phone"></i> +90 555 555 55 55</p>
-                                        <p><i class="fa fa-envelope-o"></i> <a href="#">kuafor1@testmail.mail</a></p>
+                                        <p><i class="fa fa-envelope-o"></i> <a href="#">profdrlorem1@testmail.mail</a></p>
                                    </div>
                                    <ul class="social-icon">
                                         <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                         <li><a href="#" class="fa fa-envelope-o"></a></li>
                                    </ul>
                               </div>
-
                          </div>
                     </div>
 
@@ -112,11 +116,14 @@
                               <img src="images/team-image2.jpg" class="img-responsive" alt="">
 
                               <div class="team-info">
-                                   <h3>Kuaför 2</h3>
-                                   <p>Manikür - Pedikür Uzmanı</p>
+                                   <h3>Op. Dr Lorem Ipsum</h3>
+                                   <p>
+                                        Dahiliye bölümünde birçok başarılı operasyon geçiren Op. Dr. Lorem Ipsum
+                                        sizler için hizmete hazır.
+                                   </p>
                                    <div class="team-contact-info">
                                         <p><i class="fa fa-phone"></i> +90 532 532 32 32</p>
-                                        <p><i class="fa fa-envelope-o"></i> <a href="#">kuafor2@testmail.mail</a></p>
+                                        <p><i class="fa fa-envelope-o"></i> <a href="#">opdrloremipsum@testmail.co</a></p>
                                    </div>
                                    <br><br><br>
                               </div>
@@ -129,8 +136,11 @@
                               <img src="images/team-image3.jpg" class="img-responsive" alt="">
 
                               <div class="team-info">
-                                   <h3>Kuaför 3</h3>
-                                   <p>Saç Bakım Uzmanı</p>
+                                   <h3>Prof. Dr. Lorem Ipsum</h3>
+                                   <p>
+                                        İskelet sisteminizdeki problemlerin en kısa sürede ve en acısız şekilde tedavisini sizlere
+                                        uygulayacak olan Prof. Dr. Lorem Ipsum sağlığınız için çalışmalarına son hızla devam ediyor.
+                                   </p>
                                    <div class="team-contact-info">
                                         <p><i class="fa fa-phone"></i> +90 551 551 51 51</p>
                                         <p><i class="fa fa-envelope-o"></i> <a href="#">kuafor3@testmail.mail</a></p>
@@ -157,58 +167,54 @@
                          <img src="images/appointment-image.jpg" class="img-responsive" alt="">
                     </div>
 
-                    <div class="col-md-6 col-sm-6">
-                         <form id="appointment-form" role="form" method="post">
-
-                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
-                                   <h2>Randevu Alın</h2>
-                              </div>
-                              <?php echo get_session('error') != false ? '<div class = "alert alert-' . $_SESSION['error'].['type']. '">' . $_SESSION['error'].['message']. '</div>' : null;
-                              ?>
-                              <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="name">Adınız</label>
-                                        <input type="text" class="form-control" id="name" name="adsoyad"
-                                             placeholder="Tam Adınız" required>
+                    <div id="app">
+                         <div class="col-md-6 col-sm-6">
+                              <form id="appointment-form" role="form" method="post">
+                                   <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                        <h2>Randevu Alın</h2>
                                    </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="email">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email"
-                                             placeholder="@">
+                                   <div id="error-message" style="display:none;"></div>
+                                   <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                        <div class="col-md-6 col-sm-6">
+                                             <label for="name">Tam Adınız</label>
+                                             <input type="text" class="form-control" id="name" name="adsoyad" placeholder="Tam Adınız" required>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                             <label for="email">E-mail adresiniz</label>
+                                             <input type="email" class="form-control" id="email" name="email" placeholder="@" required>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                             <label for="date">Tarih</label>
+                                             <input type="date" id="date" name="randevutarih" class="form-control" required>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                             <label for="select">Bölüm</label>
+                                             <select class="form-control" id="select" name="bolum" required>
+                                                  <option value="">Bölüm seçiniz</option>
+                                                  <?php
+                                                  $bolumler = [
+                                                       ['id' => 1, 'name' => 'Dahiliye'],
+                                                       ['id' => 2, 'name' => 'Kardiyoloji'],
+                                                       ['id' => 3, 'name' => 'Ortopedi'],
+                                                  ];
+                                                  foreach ($bolumler as $bolum) {
+                                                       echo '<option value="' . $bolum['id'] . '">' . $bolum['name'] . '</option>';
+                                                  }
+                                                  ?>
+                                             </select>
+                                        </div>
+                                        <div class="col-md-12 col-sm-12">
+                                             <label for="telephone">Telefon Numaranız</label>
+                                             <input type="tel" class="form-control" id="phone" name="telno" placeholder="(500)-000-00-00" required>
+                                             <label for="message">Ek Mesajınız</label>
+                                             <textarea class="form-control" rows="5" id="message" name="mesaj" placeholder="Mesaj"></textarea>
+                                             <button type="submit" class="form-control btn-blue">Randevu al</button>
+                                        </div>
                                    </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="date">Tarih</label>
-                                        <input type="date" id="date" name="randevutarih" value="" class="form-control" required>
-                                   </div>
-
-                                   <div class="col-md-6 col-sm-6">
-                                        <label for="select">Bölüm</label>
-                                        <select class="form-control" id="select" name="bolum">
-                                             <option>Bölüm seçiniz</option>
-                                             <?php foreach($data as $bolumler): ?>
-                                                  <option value="<?= $bolumler['id'] ?>"><?= $bolumler['name'] ?></option>
-                                             <?php endforeach; ?>
-                                        </select>
-                                   </div>
-
-                                   <div class="col-md-12 col-sm-12">
-                                        <label for="telephone">Telefon Numaranız</label>
-                                        <input type="tel" class="form-control" id="phone" name="telno"
-                                             placeholder="(500)-000-00-00" required>
-                                        <label for="Message">Ek Mesajınız</label>
-                                        <textarea class="form-control" rows="5" id="message" name="mesaj"
-                                             placeholder="Mesaj"></textarea>
-                                        <button type="submit" name="submit" value="1" class="form-control btn-blue"> Randevu al
-                                        </button>
-                                   </div>
-                              </div>
-                         </form>
+                              </form>
+                         </div>
                     </div>
-
                </div>
-          </div>
      </section>
 
 
@@ -266,6 +272,7 @@
      </footer>
 
      <script src="assets/js/jquery.js"></script>
+     <script src="assets/js/script.js"></script>
      <script src="assets/js/bootstrap.min.js"></script>
      <script src="assets/js/jquery.sticky.js"></script>
      <script src="assets/js/jquery.stellar.min.js"></script>
@@ -277,44 +284,40 @@
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script>
-
-
           const basvuru = document.getElementById('appointment-form');
 
-          basvuru.addEventListener('submit', (e) =>{
+          basvuru.addEventListener('submit', (e) => {
 
-          let name = document.getElementById('name').value;
-          let email = document.getElementById('email').value;
-          let date = document.getElementById('date').value;
-          let select = document.getElementById('select').value;
-          let phone = document.getElementById('phone').value;
-          let message = document.getElementById('message').value;
+               let name = document.getElementById('name').value;
+               let email = document.getElementById('email').value;
+               let date = document.getElementById('date').value;
+               let select = document.getElementById('select').value;
+               let phone = document.getElementById('phone').value;
+               let message = document.getElementById('message').value;
 
-          let formData = new FormData();
+               let formData = new FormData();
 
-          formData.append('name',name);
-          formData.append('email',email);
-          formData.append('date',date);
-          formData.append('select',select);
-          formData.append('phone',phone);
-          formData.append('message',message);
+               formData.append('name', name);
+               formData.append('email', email);
+               formData.append('date', date);
+               formData.append('select', select);
+               formData.append('phone', phone);
+               formData.append('message', message);
 
-          axios.post('<?= url('api/randevuekle') ?>', formData).then(res => {
-               if(res.data.redirect) {
-                    window.location.href = res.data.redirect;
-               } else {
-                swal.fire(
-                    res.data.title,
-                    res.data.msg,
-                    res.data.status,
-                );
-            }
-               console.log(res)
-          }).catch(err => console.log(err))
-          e.preventDefault();
-     });
-          
-         
+               axios.post('<?= url('api/randevuekle') ?>', formData).then(res => {
+                    if (res.data.redirect) {
+                         window.location.href = res.data.redirect;
+                    } else {
+                         swal.fire(
+                              res.data.title,
+                              res.data.msg,
+                              res.data.status,
+                         );
+                    }
+                    console.log(res)
+               }).catch(err => console.log(err))
+               e.preventDefault();
+          });
      </script>
 
 </body>

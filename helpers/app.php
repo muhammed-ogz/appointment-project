@@ -32,34 +32,9 @@ function assets($assetName)
     if (file_exists(BASEDIR . '/assets/' . $assetName)) return URL . 'assets/' . $assetName;
 }
 
-function add_session($index, $value)
-{
-    $_SESSION[$index] = $value;
-}
-function get_session($index)
-{
-    if (isset($_SESSION[$index])) return $_SESSION[$index];
-    else return false;
-}
 function filter($field)
 {
     return is_array($field) ? array_map('filter', $field) : htmlspecialchars(trim($field));
-}
-function post($index){
-    if (isset($_POST[$index])) return filter($_POST[$index]);
-    else return false;
-}
-function get($index){
-    if (isset($_GET[$index])) return filter($_GET[$index]);
-    else return false;
-}
-
-function get_cookies($index){
-    if (isset($_COOKIE[$index])) return trim($_COOKIE[$index]);
-    else return false;
-}
-function redirect($link){
-    header('Location:'. URL . $link);
 }
 
 function url($url){
@@ -67,6 +42,7 @@ function url($url){
     return URL . $url;
 }
 
+//verileri görebilmek için özelleştirilmiş fonksiyon.
 function _p($data){
     echo "<pre style = 'background-color:#1d1d1d; color: greenyellow; position: absolute; left: 0; top: 0; z-index: 9999999999; width: 100%; height: 400px;'>";
     print_r($data);
